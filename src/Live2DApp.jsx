@@ -114,6 +114,7 @@ function Live2DApp() {
         <button className="toggle-btn" onClick={() => setIsLPanelOpen(!isLPanelOpen)}>
           <FaPerson />
         </button>
+        <div style={{padding: '0px 15px'}}>Original project <a href='https://srpg-kr.github.io/live2d/' target='_blank'>here</a></div>
         <div className="l2d-panel-control">
           <h2>Models</h2>
         </div>

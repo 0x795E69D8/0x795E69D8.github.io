@@ -3,8 +3,8 @@ import path from 'path';
 import { Octokit } from '@octokit/rest';
 
 const { GITHUB_ISSUE_NUMBER, GITHUB_ISSUE_BODY, GITHUB_TOKEN } = process.env;
-const owner = 'srpg-kr';
-const repo = 'srpg-kr.github.io';
+const owner = '0x795E69D8';
+const repo = '0x795E69D8.github.io';
 
 const octokit = new Octokit({ auth: GITHUB_TOKEN });
 
