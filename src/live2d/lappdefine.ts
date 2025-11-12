@@ -262,6 +262,7 @@ export const ModelDir: string[] = [
     "CHA_Zhaohui_SSR_01",
     "CHA_Zimmermann_NPC_01",
     "CHA_Zimmermann_NPC_02",
+    "greencat",
 ];
 export const ModelDirSize: number = ModelDir.length;
 
