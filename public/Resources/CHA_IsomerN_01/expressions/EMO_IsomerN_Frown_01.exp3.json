@@ -4,22 +4,17 @@
 	"FadeOutTime": 0.15,
 	"Parameters": [
 		{
-			"Id": "Param3",
-			"Value": 0,
+			"Id": "Param5",
+			"Value": -1,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param6",
+			"Value": -1,
 			"Blend": "Add"
 		},
 		{
 			"Id": "ParamEyeLOpen",
-			"Value": 0,
-			"Blend": "Add"
-		},
-		{
-			"Id": "ParamEyeLSmile",
-			"Value": 0,
-			"Blend": "Add"
-		},
-		{
-			"Id": "Param",
 			"Value": 0,
 			"Blend": "Add"
 		},
@@ -29,47 +24,77 @@
 			"Blend": "Add"
 		},
 		{
-			"Id": "ParamEyeRSmile",
+			"Id": "Param8",
+			"Value": -1,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param7",
+			"Value": -1,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamEyeX",
 			"Value": 0,
 			"Blend": "Add"
 		},
 		{
-			"Id": "Param2",
+			"Id": "ParamEyeY",
+			"Value": 0,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamEyeszoom",
+			"Value": 0,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamEyeszoom2",
 			"Value": 0,
 			"Blend": "Add"
 		},
 		{
 			"Id": "ParamBrowLForm",
-			"Value": 0,
-			"Blend": "Add"
-		},
-		{
-			"Id": "ParamBrowRForm",
-			"Value": 0,
-			"Blend": "Add"
-		},
-		{
-			"Id": "ParamMouthForm",
-			"Value": 0,
-			"Blend": "Add"
-		},
-		{
-			"Id": "ParamBrowRForm2",
-			"Value": 0,
-			"Blend": "Add"
-		},
-		{
-			"Id": "ParamMouthForm2",
 			"Value": -1,
 			"Blend": "Add"
 		},
 		{
-			"Id": "Param8",
+			"Id": "ParamBrowRForm",
+			"Value": -1,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamMouthForm",
+			"Value": 1,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamBrowLForm2",
+			"Value": 0.606,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamBrowLForm5",
 			"Value": 0,
 			"Blend": "Add"
 		},
 		{
-			"Id": "Param9",
+			"Id": "ParamBrowLForm4",
+			"Value": 0,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamBrowLForm3",
+			"Value": 0,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamBrowLForm6",
+			"Value": 0,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamBrowLForm7",
 			"Value": 0,
 			"Blend": "Add"
 		}
