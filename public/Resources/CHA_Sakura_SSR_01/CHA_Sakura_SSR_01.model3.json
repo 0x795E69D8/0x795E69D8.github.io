@@ -40,6 +40,10 @@
 				"File": "expressions/CHA_Sakura_Surprised_01.exp3.json"
 			},
 			{
+				"Name": "Surprised02",
+				"File": "expressions/CHA_Sakura_Surprised_02.exp3.json"
+			},
+			{
 				"Name": "Upset",
 				"File": "expressions/CHA_Sakura_Upset_01.exp3.json"
 			}
@@ -47,13 +51,19 @@
 		"Motions": {
 			"": [
 				{
-					"File": "motions/Mouthopen_10s.motion3.json"
+					"File": "motions/Mouthopen_10s.motion3.json",
+					"FadeInTime": 0,
+					"FadeOutTime": 0
 				},
 				{
-					"File": "motions/Mouthopen_2s.motion3.json"
+					"File": "motions/Mouthopen_2s.motion3.json",
+					"FadeInTime": 0,
+					"FadeOutTime": 0
 				},
 				{
-					"File": "motions/Mouthopen_5s.motion3.json"
+					"File": "motions/Mouthopen_5s.motion3.json",
+					"FadeInTime": 0,
+					"FadeOutTime": 0
 				}
 			]
 		}
@@ -61,17 +71,17 @@
 	"Groups": [
 		{
 			"Target": "Parameter",
-			"Name": "EyeBlink",
+			"Name": "LipSync",
 			"Ids": [
-				"ParamEyeLOpen",
-				"ParamEyeROpen"
+				"ParamMouthOpenY"
 			]
 		},
 		{
 			"Target": "Parameter",
-			"Name": "LipSync",
+			"Name": "EyeBlink",
 			"Ids": [
-				"ParamMouthOpenY"
+				"ParamEyeLOpen",
+				"ParamEyeROpen"
 			]
 		}
 	],
