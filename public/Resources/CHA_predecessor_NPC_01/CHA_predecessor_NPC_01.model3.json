@@ -12,6 +12,10 @@
 				"File": "expressions/EMO_predecessor_Angry_01.exp3.json"
 			},
 			{
+				"Name": "Dead",
+				"File": "expressions/EMO_predecessor_Dead_01.exp3.json"
+			},
+			{
 				"Name": "Disdain",
 				"File": "expressions/EMO_predecessor_Disdain_01.exp3.json"
 			},
@@ -27,13 +31,19 @@
 		"Motions": {
 			"": [
 				{
-					"File": "motions/Mouthopen_10s.motion3.json"
+					"File": "motions/Mouthopen_10s.motion3.json",
+					"FadeInTime": 0,
+					"FadeOutTime": 0
 				},
 				{
-					"File": "motions/Mouthopen_2s.motion3.json"
+					"File": "motions/Mouthopen_2s.motion3.json",
+					"FadeInTime": 0,
+					"FadeOutTime": 0
 				},
 				{
-					"File": "motions/Mouthopen_5s.motion3.json"
+					"File": "motions/Mouthopen_5s.motion3.json",
+					"FadeInTime": 0,
+					"FadeOutTime": 0
 				}
 			]
 		}
@@ -41,16 +51,16 @@
 	"Groups": [
 		{
 			"Target": "Parameter",
-			"Name": "EyeBlink",
+			"Name": "LipSync",
 			"Ids": [
-				"ParamEyeLOpen"
+				"ParamMouthOpenY"
 			]
 		},
 		{
 			"Target": "Parameter",
-			"Name": "LipSync",
+			"Name": "EyeBlink",
 			"Ids": [
-				"ParamMouthOpenY"
+				"ParamEyeLOpen"
 			]
 		}
 	],

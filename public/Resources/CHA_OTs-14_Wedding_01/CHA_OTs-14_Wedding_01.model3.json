@@ -1,0 +1,135 @@
+{
+	"Version": 3,
+	"FileReferences": {
+		"Moc": "CHA_OTs-14_Wedding_01.moc3",
+		"Textures": [
+			"CHA_OTs-14_Wedding_01.2048/texture_00.png"
+		],
+		"DisplayInfo": "CHA_OTs-14_Wedding_01.cdi3.json",
+		"Expressions": [
+			{
+				"Name": "Angry",
+				"File": "expressions/EMO_OTs-14_Wedding_Angry_01.exp3.json"
+			},
+			{
+				"Name": "Confused",
+				"File": "expressions/EMO_OTs-14_Wedding_Confused_01.exp3.json"
+			},
+			{
+				"Name": "Cry",
+				"File": "expressions/EMO_OTs-14_Wedding_Cry_01.exp3.json"
+			},
+			{
+				"Name": "Cry02",
+				"File": "expressions/EMO_OTs-14_Wedding_Cry_02.exp3.json"
+			},
+			{
+				"Name": "Cry03",
+				"File": "expressions/EMO_OTs-14_Wedding_Cry_03.exp3.json"
+			},
+			{
+				"Name": "Happy",
+				"File": "expressions/EMO_OTs-14_Wedding_Happy_01.exp3.json"
+			},
+			{
+				"Name": "Helpless",
+				"File": "expressions/EMO_OTs-14_Wedding_Helpness_01.exp3.json"
+			},
+			{
+				"Name": "Idle",
+				"File": "expressions/EMO_OTs-14_Wedding_Idle_01.exp3.json"
+			},
+			{
+				"Name": "Idle02",
+				"File": "expressions/EMO_OTs-14_Wedding_Idle_02.exp3.json"
+			},
+			{
+				"Name": "Jealous",
+				"File": "expressions/EMO_OTs-14_Wedding_Jealous_01.exp3.json"
+			},
+			{
+				"Name": "Pain",
+				"File": "expressions/EMO_OTs-14_Wedding_Pain_01.exp3.json"
+			},
+			{
+				"Name": "Regret",
+				"File": "expressions/EMO_OTs-14_Wedding_Regret_01.exp3.json"
+			},
+			{
+				"Name": "Serious",
+				"File": "expressions/EMO_OTs-14_Wedding_Serious_01.exp3.json"
+			},
+			{
+				"Name": "Serious02",
+				"File": "expressions/EMO_OTs-14_Wedding_Serious_02.exp3.json"
+			},
+			{
+				"Name": "Shock",
+				"File": "expressions/EMO_OTs-14_Wedding_Shcok_01.exp3.json"
+			},
+			{
+				"Name": "Shout",
+				"File": "expressions/EMO_OTs-14_Wedding_Shout_01.exp3.json"
+			},
+			{
+				"Name": "Shy",
+				"File": "expressions/EMO_OTs-14_Wedding_Shy_01.exp3.json"
+			},
+			{
+				"Name": "Smile",
+				"File": "expressions/EMO_OTs-14_Wedding_Smile_01.exp3.json"
+			},
+			{
+				"Name": "Surprised",
+				"File": "expressions/EMO_OTs-14_Wedding_Surprised_01.exp3.json"
+			},
+			{
+				"Name": "Tender",
+				"File": "expressions/EMO_OTs-14_Wedding_Tender_01.exp3.json"
+			},
+			{
+				"Name": "Think",
+				"File": "expressions/EMO_OTs-14_Wedding_Think_01.exp3.json"
+			},
+			{
+				"Name": "Uneasy",
+				"File": "expressions/EMO_OTs-14_Wedding_Uneasy_01.exp3.json"
+			},
+			{
+				"Name": "Worried",
+				"File": "expressions/EMO_OTs-14_Wedding_Worried_01.exp3.json"
+			}
+		],
+		"Motions": {
+			"": [
+				{
+					"File": "motions/Mouthopen_10s.motion3.json"
+				},
+				{
+					"File": "motions/Mouthopen_2s.motion3.json"
+				},
+				{
+					"File": "motions/Mouthopen_5s.motion3.json"
+				}
+			]
+		}
+	},
+	"Groups": [
+		{
+			"Target": "Parameter",
+			"Name": "LipSync",
+			"Ids": [
+				"ParamMouthOpenY"
+			]
+		},
+		{
+			"Target": "Parameter",
+			"Name": "EyeBlink",
+			"Ids": [
+				"ParamEyeROpen",
+				"ParamEyeLOpen"
+			]
+		}
+	],
+	"HitAreas": []
+}
