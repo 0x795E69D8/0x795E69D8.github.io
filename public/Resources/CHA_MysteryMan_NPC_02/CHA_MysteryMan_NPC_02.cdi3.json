@@ -1,0 +1,66 @@
+{
+	"Version": 3,
+	"Parameters": [
+		{
+			"Id": "ParamEyeLOpen",
+			"GroupId": "",
+			"Name": "左眼 开闭"
+		},
+		{
+			"Id": "ParamEyeROpen",
+			"GroupId": "",
+			"Name": "右眼 开闭"
+		},
+		{
+			"Id": "ParamEyeLSmile",
+			"GroupId": "",
+			"Name": "左眼 微笑"
+		},
+		{
+			"Id": "ParamEyeRSmile",
+			"GroupId": "",
+			"Name": "右眼 微笑"
+		},
+		{
+			"Id": "ParamMouthForm",
+			"GroupId": "",
+			"Name": "嘴 变形"
+		},
+		{
+			"Id": "ParamMouthOpenY",
+			"GroupId": "",
+			"Name": "嘴 开闭"
+		}
+	],
+	"ParameterGroups": [],
+	"Parts": [
+		{
+			"Id": "CHA_Medd_02",
+			"Name": "CHA_Medd_01"
+		},
+		{
+			"Id": "PartSketch0",
+			"Name": "[ 参考图 ]"
+		},
+		{
+			"Id": "Part",
+			"Name": "闭眼"
+		},
+		{
+			"Id": "MDJS_Idle_zuoyan",
+			"Name": "MDJS_Idle_zuoyan"
+		},
+		{
+			"Id": "MDJS_Idle_youyan",
+			"Name": "MDJS_Idle_youyan"
+		},
+		{
+			"Id": "MDJS_Idle_zuiba_b",
+			"Name": "MDJS_Idle_zuiba_b"
+		},
+		{
+			"Id": "MDJS_Idle_zuiba_k",
+			"Name": "MDJS_Idle_zuiba_k"
+		}
+	]
+}

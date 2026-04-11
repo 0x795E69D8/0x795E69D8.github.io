@@ -30,6 +30,14 @@
 			{
 				"Name": "Surprised",
 				"File": "expressions/EMO_Lenten_Surprised_01.exp3.json"
+			},
+			{
+				"Name": "Confidence",
+				"File": "expressions/EMO_Lenten_Confidence_01.exp3.json"
+			},
+			{
+				"Name": "Tender",
+				"File": "expressions/EMO_Lenten_Tender_01.exp3.json"
 			}
 		],
 		"Motions": {
