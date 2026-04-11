@@ -16,12 +16,20 @@
 				"File": "expressions/EMO_Sop_Confused_01.exp3.json"
 			},
 			{
+				"Name": "Crazy",
+				"File": "expressions/EMO_Sop_Crazy_01.exp3.json"
+			},
+			{
 				"Name": "Dissatisfied",
 				"File": "expressions/EMO_Sop_Dissatisfied_01.exp3.json"
 			},
 			{
 				"Name": "Excited",
 				"File": "expressions/EMO_Sop_Excited_01.exp3.json"
+			},
+			{
+				"Name": "Furious",
+				"File": "expressions/EMO_Sop_Furious_01.exp3.json"
 			},
 			{
 				"Name": "Happy",
