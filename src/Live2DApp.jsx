@@ -25,7 +25,9 @@ function Live2DApp({ gameId = 0 }) {
       ? navigator.language
       : 'en'
   );
-  const [displayLocalized, setDisplayLocalized] = useState(true);
+  const [displayLocalized, setDisplayLocalized] = useState(
+    JSON.parse(localStorage.getItem("displayLocalized") ?? "true")
+  );
 
   const sortedModels = modelList.map((model, index) => ({
     model,
@@ -65,6 +67,11 @@ function Live2DApp({ gameId = 0 }) {
 
     return () => clearTimeout(timer);
   }, [gameId, delegateReadyTick]);
+
+  const handleDisplayLocalized = (e) => {
+    setDisplayLocalized(e.target.checked);
+    localStorage.setItem("displayLocalized", JSON.stringify(e.target.checked))
+  }
 
   // Handler to load a new model when a button is clicked.
   const handleModelSelect = (modelIndex) => {
@@ -176,7 +183,7 @@ function Live2DApp({ gameId = 0 }) {
           <input
             type="checkbox"
             checked={displayLocalized}
-            onChange={(e) => setDisplayLocalized(e.target.checked)}
+            onChange={handleDisplayLocalized}
           />
           Localized Names
           <div className="category-list">
