@@ -283,6 +283,68 @@ export class LAppView {
     return this._deviceToScreen.transformY(deviceY);
   }
 
+  public clearBackground(): void {
+    if (this._back) {
+      this._subdelegate
+        .getTextureManager()
+        .releaseTextureByTexture(this._back._texture);
+      this._back.release();
+      this._back = null;
+    }
+  }
+
+  public setBackground(textureInfo: TextureInfo, canvasWidth: number, canvasHeight: number): void {
+    this.clearBackground();
+
+    const x = canvasWidth * 0.5;
+    const y = canvasHeight * 0.5;
+
+    const canvasAspect = canvasWidth / canvasHeight;
+    const imageAspect  = textureInfo.width / textureInfo.height;
+
+    let fwidth: number;
+    let fheight: number;
+
+    if (imageAspect > canvasAspect) {
+      fheight = canvasHeight;
+      fwidth  = canvasHeight * imageAspect;
+    } else {
+      fwidth  = canvasWidth;
+      fheight = canvasWidth / imageAspect;
+    }
+
+    this._back = new LAppSprite(x, y, fwidth, fheight, textureInfo.id);
+    this._back.setSubdelegate(this._subdelegate);
+  }
+
+  public resizeBackground(canvasWidth: number, canvasHeight: number): void {
+    if (!this._back) return;
+
+    const textureManager = this._subdelegate.getTextureManager();
+    const textureInfo = textureManager.getTextureInfoByTexture(this._back._texture);
+    if (!textureInfo) return;
+
+    const x = canvasWidth * 0.5;
+    const y = canvasHeight * 0.5;
+
+    const canvasAspect = canvasWidth / canvasHeight;
+    const imageAspect  = textureInfo.width / textureInfo.height;
+
+    let fwidth: number;
+    let fheight: number;
+
+    if (imageAspect > canvasAspect) {
+      fheight = canvasHeight;
+      fwidth  = canvasHeight * imageAspect;
+    } else {
+      fwidth  = canvasWidth;
+      fheight = canvasWidth / imageAspect;
+    }
+
+    this._back = new LAppSprite(x, y, fwidth, fheight, textureInfo.id);
+    this._back.setSubdelegate(this._subdelegate);
+  }
+
   _touchManager: TouchManager; // タッチマネージャー
   _deviceToScreen: CubismMatrix44; // デバイスからスクリーンへの行列
   _viewMatrix: CubismViewMatrix; // viewMatrix

@@ -1,5 +1,6 @@
 // src/components/ControlsPanel.jsx
 import React, { useState, useEffect } from 'react';
+import { getAvailableBackgrounds } from '../live2d/lappdefine';
 import { LAppDelegate } from '../live2d/lappdelegate';
 import { ColorPicker, useColor } from "react-color-palette";
 import "react-color-palette/css";
@@ -50,9 +51,11 @@ function BuyMeACoffeeButton({ user }) {
   );
 }
 
-function ControlsPanel({ refreshFlag }) {
+function ControlsPanel({ gameId, refreshFlag }) {
   const [isColorPickerOpen, setIsColorPickerOpen] = useState(false);
   const [bgColor, setBgColor] = useColor(localStorage.getItem("bgcolor") || "#ffffffff");
+  const [bgList, setBgList] = useState([]);
+  const [bgImage, setBgImage] = useState(localStorage.getItem("bgimage") || '');
   const [expressions, setExpressions] = useState([]);
   const [motionGroups, setMotionGroups] = useState([]);
   const [motions, setMotions] = useState([]);
@@ -67,6 +70,27 @@ function ControlsPanel({ refreshFlag }) {
   const [bodyAngleX, setBodyAngleX] = useState(0);
   const [bodyAngleY, setBodyAngleY] = useState(0);
   const [bodyAngleZ, setBodyAngleZ] = useState(0);
+
+  const applyBgImage = (fileName) => {
+    const subdelegate = LAppDelegate.getInstance().getSubdelegate();
+    if (!subdelegate) {
+      return;
+    }
+    subdelegate.setBgImage(fileName);
+  };
+
+  const handleSelectBgImage = (e) => {
+    const fileName = e.target.value;
+    setBgImage(fileName);
+    localStorage.setItem("bgimage", fileName);
+    applyBgImage(fileName);
+  };
+
+  const handleClearBgImage = () => {
+    setBgImage('');
+    localStorage.removeItem("bgimage");
+    applyBgImage('');
+  };
 
   // This function synchronizes parameters with the current state of the model.
   // It updates both parameters and the baseline expression parameters.
@@ -171,8 +195,17 @@ function ControlsPanel({ refreshFlag }) {
   };
 
   useEffect(() => {
+    const backgrounds = getAvailableBackgrounds(gameId);
+    setBgList(backgrounds);
+  }, [gameId]);
+
+  useEffect(() => {
     refreshControls();
   }, [refreshFlag]);
+
+  useEffect(() => {
+    if (bgImage) applyBgImage(bgImage);
+  }, [bgImage]);
 
   // Poll for the model until it is loaded, then refresh the controls.
   useEffect(() => {
@@ -412,14 +445,33 @@ function ControlsPanel({ refreshFlag }) {
       <button onClick={() => setIsColorPickerOpen(!isColorPickerOpen)}>Change Color</button>
       { isColorPickerOpen && (
         <div>
-          <div className="color-picker-overlay" onClick={() => setIsColorPickerOpen(false)}>
-          </div>
-          <div  className="color-picker-container">
+          <div className="color-picker-overlay" onClick={() => setIsColorPickerOpen(false)} />
+          <div className="color-picker-container">
             <ColorPicker color={bgColor} onChange={setBgColor} 
             onChangeComplete={handleBGColorChange}/>
           </div>
         </div>
       )}
+      <div style={{ marginTop: '0.75rem' }}>
+        <label>Background Image:</label>
+        <select value={bgImage} onChange={handleSelectBgImage}>
+          <option value="">-- Select Background --</option>
+          {bgList.map((bg, idx) => (
+            <option key={idx} value={bg}>
+              {bg}
+            </option>
+          ))}
+        </select>
+        {bgImage && (
+          <button
+            type="button"
+            onClick={handleClearBgImage}
+            style={{ marginTop: '0.5rem' }}
+          >
+            Clear background
+          </button>
+        )}
+      </div>
       <h2>Expressions</h2>
       <select onChange={handleExpressionChange}>
       <option value="">-- Select Expression --</option>

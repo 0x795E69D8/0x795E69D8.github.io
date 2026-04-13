@@ -110,6 +110,7 @@ export class LAppSubdelegate {
     this.resizeCanvas();
     this._view.initialize(this);
     this._view.initializeSprite();
+    this._view.resizeBackground(this._canvas.width, this._canvas.height);
   }
 
   private resizeObserverCallback(
@@ -330,6 +331,24 @@ export class LAppSubdelegate {
 
   public isContextLost(): boolean {
     return this._glManager.getGl().isContextLost();
+  }
+
+  public setBgImage(fileName: string): void {
+    if (this._view) {
+      this._view.clearBackground();
+    }
+
+    if (!fileName) return;
+
+    const { width, height } = this._canvas;
+
+    this._textureManager.createTextureFromPngFile(
+      LAppDefine.BgPath + fileName + LAppDefine.BgFileExt,
+      false,
+      (textureInfo) => {
+        this._view.setBackground(textureInfo, width, height);
+      }
+    );
   }
 
   private _canvas: HTMLCanvasElement;

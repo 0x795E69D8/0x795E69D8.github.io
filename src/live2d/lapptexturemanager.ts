@@ -153,6 +153,19 @@ export class LAppTextureManager {
     img.src = fileName;
   }
 
+  public getTextureInfoByTexture(texture: WebGLTexture): TextureInfo | null {
+    for (
+      let ite = this._textures.begin();
+      ite.notEqual(this._textures.end());
+      ite.preIncrement()
+    ) {
+      if (ite.ptr().id === texture) {
+        return ite.ptr();
+      }
+    }
+    return null;
+  }
+
   /**
    * 画像の解放
    *

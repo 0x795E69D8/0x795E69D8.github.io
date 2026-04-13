@@ -237,7 +237,7 @@ function Live2DApp({ gameId = 0 }) {
           <VscSettings />
         </button>
         <div className="sidebar-content">
-          <ControlsPanel refreshFlag={refreshFlag} />
+          <ControlsPanel gameId={gameId} refreshFlag={refreshFlag} />
         </div>
         <div className="l2d-panel-opacity">
           <div>
