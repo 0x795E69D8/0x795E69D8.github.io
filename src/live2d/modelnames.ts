@@ -11,6 +11,7 @@
 export const ModelNameOverrides: Record<string, Record<string, string>> = {
   // Add overrides here as needed.
   'CHA_Bibi_NPC_01': { zh: '小哔', en: 'Beepy' },
+  'CHA_V3_01': { zh: 'V3机器人', en: 'V3 Robot' },
   'CHA_Bibi_NPC_02': { zh: '小哔原型', en: 'Beepy Prototype' },
   'CHA_Bibi_NPC_03': { zh: '小哔丹德莱', en: 'Dandegate' },
   'greencat': { zh: '格琳喵', en: 'Kalinyan' },
@@ -250,6 +251,8 @@ export const ModelNameOverrides: Record<string, Record<string, string>> = {
   'CHA_Kuro_01': { zh: '卡萝NPC', en: 'Kuro NPC' },
   'CHA_Agatha_01': { zh: '阿加莎', en: 'Agatha' },
   'CHA_Bellis_01': { zh: '贝丽丝', en: 'Bellis' },
+  'CHA_Daria_NPC_01': { zh: '达莉娅', en: 'Daria' },
+  'CHA_Delilah_01': { zh: '黛拉', en: 'Della' },
   'CHA_Mayling_NPC_01': { zh: '美玲', en: 'Mayling' },
   'CHA_Colphne_N_01': { zh: '寇尔芙N', en: 'Colphne N' },
   'CHA_Colphne_SR_01': { zh: '寇尔芙SR', en: 'Colphne SR' },
@@ -313,6 +316,7 @@ export const ModelNameOverrides: Record<string, Record<string, string>> = {
   'CHA_G41_01': { zh: '芙铃', en: 'Furin' },
   'CHA_Vera_01': { zh: '薇拉', en: 'Vera' },
   'CHA_Starvoid_01': { zh: '星渊（幼）', en: 'Star Abyss (Young)' },
+  'CHA_Misia_NPC_01': { zh: '米希亚', en: 'Misia' },
   'CHA_Dandelion_NPC_01': { zh: '丹德莱', en: 'Dandelion' },
   'CHA_Lene_SSR_01_OLD': { zh: '莱妮SSR（老）', en: 'Lainie SSR (outdated)' },
   'CHA_Levva_NPC_01_OLD': { zh: '莱娅西装（老）', en: 'Leva Suit (outdated)' },
