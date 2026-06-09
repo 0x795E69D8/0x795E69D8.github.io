@@ -8,6 +8,10 @@
 		"DisplayInfo": "CHA_G41_01.cdi3.json",
 		"Expressions": [
 			{
+				"Name": "Angry",
+				"File": "expressions/EMO_G41_Anger_01.exp3.json"
+			},
+			{
 				"Name": "Happy",
 				"File": "expressions/EMO_G41_Happy_01.exp3.json"
 			},
@@ -24,8 +28,16 @@
 				"File": "expressions/EMO_G41_Idle_01.exp3.json"
 			},
 			{
+				"Name": "Injury",
+				"File": "expressions/EMO_G41_Injury_01.exp3.json"
+			},
+			{
 				"Name": "Nervous",
 				"File": "expressions/EMO_G41_Nervous_01.exp3.json"
+			},
+			{
+				"Name": "Pain",
+				"File": "expressions/EMO_G41_Pain_01.exp3.json"
 			},
 			{
 				"Name": "Sad",
@@ -34,6 +46,26 @@
 			{
 				"Name": "Serious",
 				"File": "expressions/EMO_G41_Serious_01.exp3.json"
+			},
+			{
+				"Name": "Shy",
+				"File": "expressions/EMO_G41_Shy_01.exp3.json"
+			},
+			{
+				"Name": "Surprised",
+				"File": "expressions/EMO_G41_Surprised_01.exp3.json"
+			},
+			{
+				"Name": "Think",
+				"File": "expressions/EMO_G41_Think_01.exp3.json"
+			},
+			{
+				"Name": "Threat",
+				"File": "expressions/EMO_G41_Threat_01.exp3.json"
+			},
+			{
+				"Name": "Worry",
+				"File": "expressions/EMO_G41_Worry_01.exp3.json"
 			}
 		],
 		"Motions": {

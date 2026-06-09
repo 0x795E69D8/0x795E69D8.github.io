@@ -28,6 +28,10 @@
 				"File": "expressions/EMO_Sweeper_Idle_01.exp3.json"
 			},
 			{
+				"Name": "Injury",
+				"File": "expressions/EMO_Sweeper_Injury_01.exp3.json"
+			},
+			{
 				"Name": "Ridicule",
 				"File": "expressions/EMO_Sweeper_Ridicule_01.exp3.json"
 			},
@@ -55,15 +59,19 @@
 		"Motions": {
 			"": [
 				{
-					"File": "motions/Mouthopen_10s.motion3.json",
+					"File": "motions/motions/Mouthopen_10s.motion3.json",
 					"FadeInTime": 0,
 					"FadeOutTime": 0
 				},
 				{
-					"File": "motions/Mouthopen_2s.motion3.json"
+					"File": "motions/motions/Mouthopen_2s.motion3.json",
+					"FadeInTime": 0,
+					"FadeOutTime": 0
 				},
 				{
-					"File": "motions/Mouthopen_5s.motion3.json"
+					"File": "motions/motions/Mouthopen_5s.motion3.json",
+					"FadeInTime": 0,
+					"FadeOutTime": 0
 				}
 			]
 		}
