@@ -16,6 +16,10 @@
 				"File": "expressions/EMO_Dusevnyj_Idle_01.exp3.json"
 			},
 			{
+				"Name": "Injury",
+				"File": "expressions/EMO_Dusevnyj_Injury_01.exp3.json"
+			},
+			{
 				"Name": "Moved",
 				"File": "expressions/EMO_Dusevnyj_Moved_01.exp3.json"
 			},
@@ -67,17 +71,17 @@
 	"Groups": [
 		{
 			"Target": "Parameter",
-			"Name": "EyeBlink",
+			"Name": "LipSync",
 			"Ids": [
-				"ParamEyeLOpen",
-				"ParamEyeROpen"
+				"ParamMouthOpenY"
 			]
 		},
 		{
 			"Target": "Parameter",
-			"Name": "LipSync",
+			"Name": "EyeBlink",
 			"Ids": [
-				"ParamMouthOpenY"
+				"ParamEyeLOpen",
+				"ParamEyeROpen"
 			]
 		}
 	],
