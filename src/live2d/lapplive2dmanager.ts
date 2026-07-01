@@ -236,7 +236,7 @@ export class LAppLive2DManager {
     this._translate = new CubismVector2();
     this._lastDrag = new CubismVector2();
     this._models = new csmVector<LAppModel>();
-    this._sceneIndex = 0;
+    this._sceneIndex = LAppDefine.DefaultIndex;
     this._gameIndex = 0;
   }
 

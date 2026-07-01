@@ -1,7 +1,7 @@
-import React, { useEffect, useState, useRef } from 'react';
-import { FaPerson } from "react-icons/fa6";
+import { useEffect, useMemo, useState, useRef } from 'react';
+import { FaGear, FaPerson } from "react-icons/fa6";
 import { VscSettings } from "react-icons/vsc";
-import { FaWrench, FaExpand, FaCompress } from 'react-icons/fa';
+import { FaChevronDown, FaChevronRight, FaCompress, FaExpand, FaWrench } from 'react-icons/fa';
 import './Live2DApp.css';
 import './styles/sidebar.css';
 import Live2DViewer from './components/Live2DViewer';
@@ -20,21 +20,50 @@ function Live2DApp({ gameId = 0 }) {
   const [isFullscreen, setIsFullscreen] = useState(false);
   const rightPanelRef = useRef(null);
   const [delegateReadyTick, setDelegateReadyTick] = useState(0);
-  const [locale] = useState(() =>
-    typeof navigator !== 'undefined' && navigator.language
-      ? navigator.language
-      : 'en'
-  );
+  const [locale, setLocale] = useState(() => {
+    let locale = localStorage.getItem("locale");
+    if (locale) return locale;
+    if (typeof navigator === 'undefined') locale = 'en';
+    if (navigator.language.startsWith('zh')) locale = 'zh';
+    else locale = 'en';
+    return locale;
+  });
+  const [isLPanelSettingsOpen, setIsLPanelSettingsOpen] = useState(false);
   const [displayLocalized, setDisplayLocalized] = useState(
     JSON.parse(localStorage.getItem("displayLocalized") ?? "true")
   );
+  const [displayGrouped, setDisplayGrouped] = useState(
+    JSON.parse(localStorage.getItem("displayGrouped") ?? "true")
+  );
+  const [expandedGroups, setExpandedGroups] = useState(new Set());
 
-  const sortedModels = modelList.map((model, index) => ({
+  const displayModels = modelList.map((model, index) => ({
     model,
-    index: index,
-    name: getModelDisplayName(model, locale)
-  }))
-  .sort((a, b) => a.name.localeCompare(b.name, locale));
+    index,
+    name: displayLocalized
+      ? getModelDisplayName(model, locale)
+      : model.displayName,
+  }));
+
+  const sortedModels = useMemo(
+    () => [...displayModels].sort((a, b) => a.name.localeCompare(b.name, locale)),
+    [displayModels, locale]
+  );
+
+  const groupedModels = useMemo(() => {
+    const groups = displayModels.reduce((groups, item) => {
+      const group = item.model.group ?? "Other";
+      if (!groups[group]) {
+        groups[group] = [];
+      }
+      groups[group].push(item);
+      return groups;
+    }, {});
+    for (const group in groups) {
+      groups[group].sort((a, b) => a.name.localeCompare(b.name, locale));
+    }
+    return groups;
+  }, [displayModels, locale]);
 
   useEffect(() => {
     const models = getAvailableModels(gameId);
@@ -72,6 +101,24 @@ function Live2DApp({ gameId = 0 }) {
     setDisplayLocalized(e.target.checked);
     localStorage.setItem("displayLocalized", JSON.stringify(e.target.checked))
   }
+
+  const handleChangeLocale = (e) => {
+    const locale = e.target.value;
+    setLocale(locale);
+    localStorage.setItem("locale", locale);
+  };
+
+  const handleDisplayGrouped = (e) => {
+    setDisplayGrouped(e.target.checked);
+    localStorage.setItem("displayGrouped", JSON.stringify(e.target.checked))
+  }
+
+  const toggleGroup = (category) => {
+    setExpandedGroups((prev) => ({
+      ...prev,
+      [category]: !prev[category],
+    }));
+  };
 
   // Handler to load a new model when a button is clicked.
   const handleModelSelect = (modelIndex) => {
@@ -178,31 +225,85 @@ function Live2DApp({ gameId = 0 }) {
         </button>
         <div className="l2d-panel-control">
           <h2>Models</h2>
+          <button
+            className="sidebar-settings-btn"
+            onClick={() => setIsLPanelSettingsOpen(!isLPanelSettingsOpen)}
+          >
+            <FaGear />
+          </button>
         </div>
         <div className="sidebar-content">
-          <input
-            type="checkbox"
-            checked={displayLocalized}
-            onChange={handleDisplayLocalized}
-          />
-          Localized Names
-          <div className="category-list">
-            {displayLocalized ? sortedModels.map(({ model, index, name }) => (
-              <button
-                key={`${model.id}-${index}`}
-                onClick={() => handleModelSelect(index)}
-              >
-                {name}
-              </button>
-            )) : modelList.map((model, index) => (
-              <button
-                key={`${model.id}-${index}`}
-                onClick={() => handleModelSelect(index)}
-              >
-                {model.displayName}
-              </button>
-            ))}
-          </div>
+          {isLPanelSettingsOpen && (
+            <div>
+              <div className="color-picker-overlay" onClick={() => setIsLPanelSettingsOpen(false)} />
+              <div className="sidebar-settings-container">
+                <h3>Model Settings</h3>
+                <div className="sidebar-settings-item">
+                  <input
+                    id="localize-checkbox"
+                    type="checkbox"
+                    checked={displayLocalized}
+                    onChange={handleDisplayLocalized}
+                  />
+                  <label htmlFor="localize-checkbox">Localize Names</label>
+                  <select
+                    id="locale-changer"
+                    value={locale}
+                    onChange={handleChangeLocale}
+                    disabled={!displayLocalized}
+                  >
+                    <option value="zh">Chinese</option>
+                    <option value="en">English</option>
+                  </select>
+                </div>
+                <div className="sidebar-settings-item">
+                  <input
+                    id="group-checkbox"
+                    type="checkbox"
+                    checked={displayGrouped}
+                    onChange={handleDisplayGrouped}
+                  />
+                  <label htmlFor="group-checkbox">Group by patch</label>
+                </div>
+                <div className="text-small">
+                  Report bugs and translation errors to <a href="https://discord.com/users/309342762514382859" target="_blank">connection_refused</a> on Discord
+                </div>
+              </div>
+            </div>
+          )}
+          {displayGrouped ? (
+            Object.entries(groupedModels).map(([group, models]) => (
+              <div key={group} className="category-section">
+                <button className="category-toggle" onClick={() => toggleGroup(group)}>
+                  {expandedGroups[group] ? <FaChevronDown /> : <FaChevronRight />}
+                  {group} <span className="count">({models.length})</span>
+                </button>
+                <div className={`category-list ${expandedGroups[group] ? "expanded" : "collapsed"} auto`}>
+                <div>
+                  {models.map(({ model, index, name }) => (
+                    <button
+                      key={`${model.id}-${index}`}
+                      onClick={() => handleModelSelect(index)}
+                    >
+                      {name}
+                    </button>
+                  ))}
+                  </div>
+                </div>
+              </div>
+            ))
+          ) : (
+            <div className="category-list default">
+              {sortedModels.map(({ model, index, name }) => (
+                <button
+                  key={`${model.id}-${index}`}
+                  onClick={() => handleModelSelect(index)}
+                >
+                  {name}
+                </button>
+              ))}
+            </div>
+          )}
         </div>
       </div>
 
