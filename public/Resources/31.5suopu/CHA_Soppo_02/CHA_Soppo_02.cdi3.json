@@ -77,6 +77,11 @@
 			"Name": "疯狂"
 		},
 		{
+			"Id": "Param27",
+			"GroupId": "ParamGroup2",
+			"Name": "哭泣"
+		},
+		{
 			"Id": "ParamEyeLOpen",
 			"GroupId": "ParamGroup4",
 			"Name": "左眼　开闭"
@@ -117,34 +122,14 @@
 			"Name": "左眉  上下"
 		},
 		{
-			"Id": "ParamBrowRY",
-			"GroupId": "ParamGroup4",
-			"Name": "右眉　上下"
-		},
-		{
 			"Id": "ParamBrowLX",
 			"GroupId": "ParamGroup4",
 			"Name": "左眉　左右"
 		},
 		{
-			"Id": "ParamBrowRX",
-			"GroupId": "ParamGroup4",
-			"Name": "右眉　左右"
-		},
-		{
 			"Id": "ParamBrowLAngle",
 			"GroupId": "ParamGroup4",
 			"Name": "左眉　角度"
-		},
-		{
-			"Id": "ParamBrowRAngle",
-			"GroupId": "ParamGroup4",
-			"Name": "右眉　角度"
-		},
-		{
-			"Id": "Param26",
-			"GroupId": "ParamGroup4",
-			"Name": "暴怒眉毛"
 		},
 		{
 			"Id": "ParamBrowLForm",
@@ -155,6 +140,26 @@
 			"Id": "Param2",
 			"GroupId": "ParamGroup4",
 			"Name": "左眉　変形2"
+		},
+		{
+			"Id": "ParamBrowRY",
+			"GroupId": "ParamGroup4",
+			"Name": "右眉　上下"
+		},
+		{
+			"Id": "ParamBrowRX",
+			"GroupId": "ParamGroup4",
+			"Name": "右眉　左右"
+		},
+		{
+			"Id": "ParamBrowRAngle",
+			"GroupId": "ParamGroup4",
+			"Name": "右眉　角度"
+		},
+		{
+			"Id": "Param26",
+			"GroupId": "ParamGroup4",
+			"Name": "暴怒眉毛"
 		},
 		{
 			"Id": "ParamBrowRForm",
@@ -200,6 +205,10 @@
 		}
 	],
 	"Parts": [
+		{
+			"Id": "Part22",
+			"Name": "索普新增.psd"
+		},
 		{
 			"Id": "Part21",
 			"Name": "CHA_Soppo_02.psd"
@@ -288,15 +297,5 @@
 			"Id": "Part13",
 			"Name": "兴奋"
 		}
-	],
-	"CombinedParameters": [
-		[
-			"ParamBrowLForm",
-			"Param2"
-		],
-		[
-			"ParamBrowRForm",
-			"Param3"
-		]
 	]
 }

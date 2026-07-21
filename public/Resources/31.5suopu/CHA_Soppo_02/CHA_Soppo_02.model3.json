@@ -20,6 +20,10 @@
 				"File": "expressions/EMO_Soppo_02_Crazy_01.exp3.json"
 			},
 			{
+				"Name": "Cry",
+				"File": "expressions/EMO_Soppo_02_Cry_01.exp3.json"
+			},
+			{
 				"Name": "Dissatisfied",
 				"File": "expressions/EMO_Soppo_02_Dissatisfied_01.exp3.json"
 			},
@@ -65,17 +69,17 @@
 	"Groups": [
 		{
 			"Target": "Parameter",
-			"Name": "EyeBlink",
+			"Name": "LipSync",
 			"Ids": [
-				"ParamEyeLOpen",
-				"ParamEyeROpen"
+				"ParamMouthOpenY"
 			]
 		},
 		{
 			"Target": "Parameter",
-			"Name": "LipSync",
+			"Name": "EyeBlink",
 			"Ids": [
-				"ParamMouthOpenY"
+				"ParamEyeLOpen",
+				"ParamEyeROpen"
 			]
 		}
 	],

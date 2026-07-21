@@ -8,8 +8,24 @@
 		"DisplayInfo": "CHA_Commander1_01.cdi3.json",
 		"Expressions": [
 			{
+				"Name": "Embarrassed",
+				"File": "expresstions/EMO_Commander1_01_Embarrassed_01.exp3.json"
+			},
+			{
 				"Name": "Idle",
 				"File": "expresstions/EMO_Commander1_01_Idle_01.exp3.json"
+			},
+			{
+				"Name": "Serious",
+				"File": "expresstions/EMO_Commander1_01_Serious_01.exp3.json"
+			},
+			{
+				"Name": "Smile",
+				"File": "expresstions/EMO_Commander1_01_Smile_01.exp3.json"
+			},
+			{
+				"Name": "Surprised",
+				"File": "expresstions/EMO_Commander1_01_Surprised_01.exp3.json"
 			}
 		],
 		"Motions": {
@@ -39,18 +55,18 @@
 	"Groups": [
 		{
 			"Target": "Parameter",
-			"Name": "LipSync",
+			"Name": "EyeBlink",
 			"Ids": [
-				"ParamMouthOpenY"
+				"ParamEyeLOpen",
+				"ParamEyeROpen"
 			]
 		},
 		{
 			"Target": "Parameter",
-			"Name": "EyeBlink",
+			"Name": "LipSync",
 			"Ids": [
-				"ParamEyeLOpen"
+				"ParamMouthOpenY"
 			]
 		}
-	],
-	"HitAreas": []
+	]
 }

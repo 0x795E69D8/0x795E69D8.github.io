@@ -1,0 +1,10 @@
+{
+	"Version": 3,
+	"FileReferences": {
+		"Moc": "6P62BOSS_S.moc3",
+		"Textures": [
+			"6P62BOSS_S.2048/texture_00.png"
+		],
+		"DisplayInfo": "6P62BOSS_S.cdi3.json"
+	}
+}

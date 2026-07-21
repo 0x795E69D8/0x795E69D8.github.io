@@ -8,8 +8,24 @@
 		"DisplayInfo": "CHA_Commander1_02.cdi3.json",
 		"Expressions": [
 			{
+				"Name": "Embarrassed",
+				"File": "expresstions/EMO_Commander1_02_Embarrassed_01.exp3.json"
+			},
+			{
 				"Name": "Idle",
 				"File": "expresstions/EMO_Commander1_02_Idle_01.exp3.json"
+			},
+			{
+				"Name": "Serious",
+				"File": "expresstions/EMO_Commander1_02_Serious_01.exp3.json"
+			},
+			{
+				"Name": "Smile",
+				"File": "expresstions/EMO_Commander1_02_Smile_01.exp3.json"
+			},
+			{
+				"Name": "Surprised",
+				"File": "expresstions/EMO_Commander1_02_Suprised_01.exp3.json"
 			}
 		],
 		"Motions": {
@@ -48,9 +64,9 @@
 			"Target": "Parameter",
 			"Name": "EyeBlink",
 			"Ids": [
-				"ParamEyeLOpen"
+				"ParamEyeLOpen",
+				"ParamEyeROpen"
 			]
 		}
-	],
-	"HitAreas": []
+	]
 }

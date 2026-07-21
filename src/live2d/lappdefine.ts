@@ -47,12 +47,22 @@ export const PowerImageName = 'CloseNormal.png';
 
 export const BgPath = ResourcesPath + 'backgrounds/';
 export const BgFileExt = '.png';
-export const DefaultIndex = 14;
+export const DefaultIndex = 3;
 
 // モデル定義---------------------------------------------
 // モデルを配置したディレクトリ名の配列
 // ディレクトリ名とmodel3.jsonの名前を一致させておくこと
 export const ModelDir_GFL2: string[] = [
+    "34.5asitiya/6P62BOSS_S",
+    "34.5asitiya/CHA_Agent_01",
+    "34.5asitiya/CHA_Agent_02",
+    "34.5asitiya/CHA_Asteria_01",
+    "34.5asitiya/CHA_Dandelion_02",
+    "34.5asitiya/CHA_Destroyer_01",
+    "34.5asitiya/CHA_Dragon_Big_01",
+    "34.5asitiya/CHA_Dreamer_01",
+    "34.5asitiya/CHA_Kalina_Suit_02",
+    "34.5asitiya/CHA_Wolfgang_01",
     "34kelaida/CHA_AdultWorker_01",
     "34kelaida/CHA_AK12_NPC_SP",
     "34kelaida/CHA_Alva_Suit_01",
@@ -544,6 +554,9 @@ export const BgNames_GFL2: string[] = [
     "BG_None_Carriage_04_02",
     "BG_None_Carriage_04_03",
     "BG_None_Carriage_04",
+    "BG_None_Carriage_05_01",
+    "BG_None_Carriage_05_02",
+    "BG_None_Carriage_05_03",
     "BG_None_Carriage_Broken_01",
     "BG_None_Carriage_Broken_02",
     "BG_None_Carriage_Centre_01",
@@ -591,6 +604,7 @@ export const BgNames_GFL2: string[] = [
     "BG_None_Vow_01",
     "BG_None_Ward_01",
     "BG_None_Ward_02",
+    "BG_None_Warship_Day_01",
     "BG_None_Zion_01",
     "BG_None_Zion_02",
     "BG_PrivatePlane_Day_01",
@@ -652,6 +666,7 @@ export const BgNames_GFL2: string[] = [
     "BG_White_ParadeusLab2_Day_01",
     "BG_White_ParadeusLab2_Night_01",
     "BG_White_Paradeuslab2_Night_02",
+    "BG_White_Paradeuslab2_Night_03",
     "BG_White_ParadeusLab3_Night_01",
     "BG_White_Patio_Day_01",
     "BG_White_Platform_Day_01",
@@ -661,6 +676,8 @@ export const BgNames_GFL2: string[] = [
     "BG_White_Street_Day_01",
     "BG_White_Summit_Day_01",
     "BG_White_TrainFortress_01",
+    "BG_White_URNC_Office_Day_01",
+    "BG_White_URNC_Office_Night_01",
     "BG_Yellow_Antnest_Day_01",
     "BG_Yellow_banquet_Night_01",
     "BG_Yellow_Bar_Day_01",
