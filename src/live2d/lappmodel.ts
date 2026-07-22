@@ -1015,8 +1015,8 @@ export class LAppModel extends CubismUserModel {
     const motionCount = this._modelSetting.getMotionCount(group);
     const motions: string[] = [];
     for (let i = 0; i < motionCount; i++) {
-      // For example, "group_0", "group_1", etc.
-      motions.push(`${group}_${i}`);
+      const name = this._modelSetting.getMotionFileName(group, i).replace(/^.*[\\/]|(\..*)$/g, "");
+      motions.push(name);
     }
     return motions;
   }

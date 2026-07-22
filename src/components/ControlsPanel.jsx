@@ -148,14 +148,19 @@ function ControlsPanel({ gameId, refreshFlag }) {
             const resolvedGroup = groups.includes(selectedMotionGroup)
               ? selectedMotionGroup
               : (hasGroups ? groups[0] : '');
+            if (resolvedGroup !== selectedMotionGroup) setSelectedMotion('');
             setSelectedMotionGroup(resolvedGroup);
             const groupMotions = hasGroups
               ? model.getAvailableMotions(resolvedGroup)
               : [];
             setMotions(groupMotions);
-            const resolvedMotion = groupMotions.includes(selectedMotion)
+            const isValidMotion =
+              selectedMotion !== '' &&
+              !Number.isNaN(selectedMotion) &&
+              selectedMotion < groupMotions.length;
+            const resolvedMotion = isValidMotion
               ? selectedMotion
-              : (groupMotions[0] || '');
+              : (groupMotions.length > 0 ? 0 : '');
             setSelectedMotion(resolvedMotion);
 
             // Update parameters and also store them as baseline.
@@ -260,27 +265,18 @@ function ControlsPanel({ gameId, refreshFlag }) {
 
   // Motion selection handler: store the currently chosen motion.
   const handleMotionChange = (e) => {
-    const motionKey = e.target.value; // Expected format: "Group_Index"
-    setSelectedMotion(motionKey);
+    const motionIdx = e.target.value;
+    setSelectedMotion(motionIdx);
   };
 
   const handleStartMotion = () => {
-    if (!selectedMotion) return;
-    const separator = selectedMotion.lastIndexOf('_');
-    if (separator === -1) {
-      return;
-    }
-    const group = selectedMotion.substring(0, separator);
-    const index = parseInt(selectedMotion.substring(separator + 1), 10);
-    if (Number.isNaN(index)) {
-      return;
-    }
+    if (selectedMotion === '' || Number.isNaN(selectedMotion)) return;
     const model = LAppDelegate.getInstance()
       .getSubdelegate()
       .getLive2DManager()
       .getModel(0);
     if (model) {
-      model.startMotion(group, index, 3, onMotionFinished);
+      model.startMotion(selectedMotionGroup, selectedMotion, 3, onMotionFinished);
     }
   };
 
@@ -473,8 +469,8 @@ function ControlsPanel({ gameId, refreshFlag }) {
         )}
       </div>
       <h2>Expressions</h2>
-      <select onChange={handleExpressionChange}>
-      <option value="">-- Select Expression --</option>
+      <select onChange={handleExpressionChange} disabled={!expressions.length}>
+        <option value="">-- {expressions.length ? 'Select Expression' : 'No Expressions'} --</option>
         {expressions.map((expr, idx) => (
           <option key={`${expr}-${idx}`} value={expr}>
             {expr}
@@ -485,27 +481,28 @@ function ControlsPanel({ gameId, refreshFlag }) {
       <h2>Motions</h2>
       <div>
         <label>Group:</label>
-        <select value={selectedMotionGroup} onChange={handleMotionGroupChange}>
+        <select value={selectedMotionGroup} onChange={handleMotionGroupChange} disabled={!motionGroups.length}>
+          {!motionGroups.length && <option value="">-- No Motion Groups --</option>}
           {motionGroups.map((group, idx) => (
             <option key={`${group}-${idx}`} value={group}>
-              {group}
+              {group || 'default'}
             </option>
           ))}
         </select>
       </div>
       <div>
         <label>Motion:</label>
-        <select value={selectedMotion} onChange={handleMotionChange}>
-          <option value="">-- Select Motion --</option>
+        <select value={selectedMotion} onChange={handleMotionChange} disabled={!motions.length}>
+          {!motions.length && <option value="">-- No Motions --</option>}
           {motions.map((motion, idx) => (
-            <option key={`${motion}-${idx}`} value={motion}>
+            <option key={`${motion}-${idx}`} value={idx}>
               {motion}
             </option>
           ))}
         </select>
       </div>
       <div style={{ marginTop: '0.5rem', display: 'flex', gap: '0.5rem' }}>
-        <button onClick={handleStartMotion} disabled={!selectedMotion}>
+        <button onClick={handleStartMotion} disabled={selectedMotion === ''}>
           Start Motion
         </button>
         <button onClick={handleStopMotion}>
