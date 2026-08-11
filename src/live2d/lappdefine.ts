@@ -47,12 +47,20 @@ export const PowerImageName = 'CloseNormal.png';
 
 export const BgPath = ResourcesPath + 'backgrounds/';
 export const BgFileExt = '.png';
-export const DefaultIndex = 3;
+export const DefaultIndex = 1;
 
 // モデル定義---------------------------------------------
 // モデルを配置したディレクトリ名の配列
 // ディレクトリ名とmodel3.jsonの名前を一致させておくこと
 export const ModelDir_GFL2: string[] = [
+    "35yigeleita/CHA_Cordyceps_01",
+    "35yigeleita/CHA_Eagletta_01",
+    "35yigeleita/CHA_Easley_01",
+    "35yigeleita/CHA_Giselle_01",
+    "35yigeleita/CHA_Hazel_01",
+    "35yigeleita/CHA_Intruder_01",
+    "35yigeleita/CHA_Jude_01",
+    "35yigeleita/CHA_Luca_01",
     "34.5asitiya/6P62BOSS_S",
     "34.5asitiya/CHA_Agent_01",
     "34.5asitiya/CHA_Agent_02",
@@ -483,6 +491,7 @@ export const BgNames_GFL2: string[] = [
     "BG_Green_MangiCorridor_Nignt_01",
     "BG_Green_MechanicalLab_Day_01",
     "BG_Green_MechanicalLab_Night_01",
+    "BG_Green_Mediastudio_Day_01",
     "BG_Green_Office_Day_01",
     "BG_Green_Port_Night_01",
     "BG_Green_Railway_Carriage_Day_01",
@@ -767,6 +776,8 @@ export const BgNames_GFL2: string[] = [
     "BG_Yellow_Road_Dusk_01",
     "BG_Yellow_Road_Dusk_Snow_01",
     "BG_Yellow_Road_Night_01",
+    "BG_Yellow_Roadcafe_Day_01",
+    "BG_Yellow_Roadcafe_Night_01",
     "BG_Yellow_RuinsBuilding_Day_01",
     "BG_Yellow_RuinsBuilding_Night_01",
     "BG_Yellow_RuinsBuilding_Night_02",
