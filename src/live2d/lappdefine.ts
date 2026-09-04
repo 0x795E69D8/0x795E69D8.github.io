@@ -53,6 +53,12 @@ export const DefaultIndex = 1;
 // モデルを配置したディレクトリ名の配列
 // ディレクトリ名とmodel3.jsonの名前を一致させておくこと
 export const ModelDir_GFL2: string[] = [
+    "36xiliya/CHA_Anya_01",
+    "36xiliya/CHA_Celia_01",
+    "36xiliya/CHA_Chloe_01",
+    "36xiliya/CHA_Fernando_01",
+    "36xiliya/CHA_Katia_01",
+    "36xiliya/CHA_Sergey_01",
     "35yigeleita/CHA_Cordyceps_01",
     "35yigeleita/CHA_Eagletta_01",
     "35yigeleita/CHA_Easley_01",
@@ -595,6 +601,8 @@ export const BgNames_GFL2: string[] = [
     "BG_None_GF1_04",
     "BG_None_GF1_05",
     "BG_None_GF1_06",
+    "BG_None_GF1_07",
+    "BG_None_GF1_08",
     "BG_None_Grifon_01",
     "BG_None_Grifon_02",
     "BG_None_Grifon_03",
@@ -705,6 +713,7 @@ export const BgNames_GFL2: string[] = [
     "BG_Yellow_Bolidaoroom_Night_01",
     "BG_Yellow_Bolidaoroom_Night_02",
     "BG_Yellow_Bridge_Day_01",
+    "BG_Yellow_BRIEFcamp_Day_01",
     "BG_Yellow_BrokenFactory_Day_01",
     "BG_Yellow_Canyon_Day_01",
     "BG_Yellow_Canyon_Day_02",
@@ -800,6 +809,7 @@ export const BgNames_GFL2: string[] = [
     "BG_Yellow_Street_Dusk_02",
     "BG_Yellow_telecompark_Day_01",
     "BG_Yellow_telecompark_Night_01",
+    "BG_Yellow_TemporaryOffice_Day_01",
     "BG_Yellow_TestField_Day_01",
     "BG_Yellow_Town_Day_01",
     "BG_Yellow_Town_Day_02",
