@@ -559,10 +559,10 @@ export class LAppModel extends CubismUserModel {
     this._model.addParameterValueById(this._idParamEyeBallY, this._dragY);
     //--------------------------------------------------------------------------
 
-    // 呼吸など
-    if (this._breath != null) {
-      this._breath.updateParameters(this._model, deltaTimeSeconds);
-    }
+    // 呼吸など breathing animation causes side effects on Agent and isn't used by GF2 models anyway
+    //if (this._breath != null) {
+    //  this._breath.updateParameters(this._model, deltaTimeSeconds);
+    //}
 
     // 物理演算の設定
     if (this._physics != null) {
