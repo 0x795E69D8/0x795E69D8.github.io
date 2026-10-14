@@ -454,7 +454,7 @@ function ControlsPanel({ gameId, refreshFlag }) {
           <option value="">-- Select Background --</option>
           {bgList.map((bg, idx) => (
             <option key={idx} value={bg}>
-              {bg}
+              {bg.split("/").pop()}
             </option>
           ))}
         </select>
