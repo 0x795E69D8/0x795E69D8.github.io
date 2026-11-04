@@ -47,12 +47,23 @@ export const PowerImageName = 'CloseNormal.png';
 
 export const BgPath = 'https://assets.ogas.app/gf2/2DRes/';
 export const BgFileExt = '.png';
-export const DefaultIndex = 0;
+export const DefaultIndex = 7;
 
 // モデル定義---------------------------------------------
 // モデルを配置したディレクトリ名の配列
 // ディレクトリ名とmodel3.jsonの名前を一致させておくこと
 export const ModelDir_GFL2: string[] = [
+    "38pohuaizhe/Character/CHA_Aegis_01",
+    "38pohuaizhe/Character/CHA_Aegis_Colonel_01",
+    "38pohuaizhe/Character/CHA_Beak_01",
+    "38pohuaizhe/Character/CHA_Beak_02",
+    "38pohuaizhe/Character/CHA_Colonel_01",
+    "38pohuaizhe/Character/CHA_Colonelprotect_01",
+    "38pohuaizhe/Character/CHA_Craftsman_01",
+    "38pohuaizhe/Character/CHA_Destroyer_02",
+    "38pohuaizhe/Character/CHA_Destroyer_03",
+    "38pohuaizhe/Character/CHA_Justice_01",
+    "38pohuaizhe/Character/CHA_Ouroboros_01",
     "37.5zhen/Character/CHA_Acicular_01",
     "37.5zhen/Character/CHA_Acicular_02",
     "37.5zhen/Character/CHA_Acicular_Meta_02",
@@ -489,6 +500,7 @@ export const ModelDir_GFL2: string[] = [
 
 export const BgNames_GFL2: string[] = [
     "37.5zhen/Background_image/BG Black_WildernessZion Day_01",
+    "38pohuaizhe/Background_image/BG_Black_Base_Day_01",
     "37.5zhen/Background_image/BG_Black_DragonOverlook_Day_01",
     "10weiketuo/Background_image/BG_Green_404Corridor_Day_01",
     "9kelukai/Background_image/BG_Green_404Room_Day_01",
@@ -700,6 +712,9 @@ export const BgNames_GFL2: string[] = [
     "30liufenyi/Background_image/BG_Red_Bedroom_Day_01",
     "31.5suopu/Background_image/BG_Red_BloodNest_Day_01",
     "31.5suopu/Background_image/BG_Red_BloodNest_Day_02",
+    "38pohuaizhe/Background_image/BG_Red_Bragg_Day_01",
+    "38pohuaizhe/Background_image/BG_Red_Bragg_Day_02",
+    "38pohuaizhe/Background_image/BG_Red_Bragg_Day_03",
     "37.5zhen/Background_image/BG_Red_Canyon_Day_01",
     "30liufenyi/Background_image/BG_Red_Castle_Day_01",
     "30liufenyi/Background_image/BG_Red_Castle_Night_01",
@@ -709,6 +724,7 @@ export const BgNames_GFL2: string[] = [
     "30liufenyi/Background_image/BG_Red_Cellar_Night_02",
     "31.5suopu/Background_image/BG_Red_Cellar_Night_03",
     "31.5suopu/Background_image/BG_Red_Cellar_Night_04",
+    "38pohuaizhe/Background_image/BG_Red_Court_Day_01",
     "30liufenyi/Background_image/BG_Red_Flowersea_Day_01",
     "30liufenyi/Background_image/BG_Red_Flowersea_Night_01",
     "30liufenyi/Background_image/BG_Red_Livingroom_Day_01",
