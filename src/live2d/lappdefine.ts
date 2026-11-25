@@ -47,12 +47,16 @@ export const PowerImageName = 'CloseNormal.png';
 
 export const BgPath = 'https://assets.ogas.app/gf2/2DRes/';
 export const BgFileExt = '.png';
-export const DefaultIndex = 7;
+export const DefaultIndex = 1;
 
 // モデル定義---------------------------------------------
 // モデルを配置したディレクトリ名の配列
 // ディレクトリ名とmodel3.jsonの名前を一致させておくこと
 export const ModelDir_GFL2: string[] = [
+    "39kaluo/Character/CHA_C19_01",
+    "39kaluo/Character/CHA_Kuro_02",
+    "39kaluo/Character/CHA_Serika_01",
+    "39kaluo/Character/CHA_Tuck_01",
     "38pohuaizhe/Character/CHA_Aegis_01",
     "38pohuaizhe/Character/CHA_Aegis_Colonel_01",
     "38pohuaizhe/Character/CHA_Beak_01",
@@ -528,10 +532,13 @@ export const BgNames_GFL2: string[] = [
     "17.5luobeila/Background_image/BG_Green_City_Street_Day_02",
     "17.5luobeila/Background_image/BG_Green_City_Street_Night_01",
     "17.5luobeila/Background_image/BG_Green_ConsultingRoom_Night_01",
+    "39kaluo/Background_image/BG_Green_Country_Day_01",
     "5maqiduo/Background_image/BG_Green_Deck_Night_01",
     "15youxi/Background_image/BG_Green_DisuseBuild_Day_01",
     "15youxi/Background_image/BG_Green_DisuseBuild_Day_02",
     "10weiketuo/Background_image/BG_Green_DollsDorm_Day_01",
+    "39kaluo/Background_image/BG_Green_Forest_Day_01",
+    "39kaluo/Background_image/BG_Green_Forest_Night_01",
     "0ob/Background_image/BG_Green_Grifon_Corridor_Day_01",
     "24hailun/Background_image/BG_Green_Grifon_Corridor_Day_02",
     "0ob/Background_image/BG_Green_Grifon_Corridor_Dusk_01",
@@ -540,6 +547,7 @@ export const BgNames_GFL2: string[] = [
     "0ob/Background_image/BG_Green_Grifon_Day_01",
     "0ob/Background_image/BG_Green_Grifon_Dusk_01",
     "0ob/Background_image/BG_Green_Grifon_Night_01",
+    "39kaluo/Background_image/BG_Green_Hotel_Day_02",
     "13chuntian/Background_image/BG_Green_Hotellobby_Day_01",
     "13chuntian/Background_image/BG_Green_Hotelmonitoring_Day_01",
     "13chuntian/Background_image/BG_Green_Hotelpool_Day_01",
@@ -552,6 +560,7 @@ export const BgNames_GFL2: string[] = [
     "0ob/Background_image/BG_Green_Institute_02",
     "1daiyan/Background_image/BG_Green_Institute_03",
     "26weierde/Background_image/BG_Green_Lake_Day_01",
+    "39kaluo/Background_image/BG_Green_Lake_Night_01",
     "24hailun/Background_image/BG_Green_MangiCorridor_Nignt_01",
     "17laiya/Background_image/BG_Green_MechanicalLab_Day_01",
     "17laiya/Background_image/BG_Green_MechanicalLab_Night_01",
@@ -607,6 +616,8 @@ export const BgNames_GFL2: string[] = [
     "23liuyisi/Background_image/BG_NeuralCloud_OasisWall_01",
     "23liuyisi/Background_image/BG_NeuralCloud_RossumRuin_01",
     "23liuyisi/Background_image/BG_NeuralCloud_RossumRuinCenter_01",
+    "39kaluo/Background_image/BG_None_BBS_01",
+    "39kaluo/Background_image/BG_None_BBS_02",
     "3laina/Background_image/BG_None_Black_Door_01",
     "13.5peili/Background_image/BG_None_Black_Door_02",
     "5maqiduo/Background_image/BG_None_Cabin_01",
